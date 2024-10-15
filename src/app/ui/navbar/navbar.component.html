@@ -1,0 +1,39 @@
+<mat-toolbar class="toolbar">
+
+    <a routerLink="/">
+        <img src="images/logo.svg" style="width: 60px; " alt="IPCC Logo">
+    </a>
+
+      <a routerLink="/">
+        <span style="font-size: 20px">
+          {{ mobile ? 'IPCC' : 'Inpatient Psychological Care Collaborative (IPCC)' }}
+        </span>
+      </a>
+    
+      <div class="spacer"></div>
+
+      @if (!mobile) {
+        <ul id="nav-items">
+          <li><a routerLink="/mission" [ngClass]="{'active': isActive('/mission')}">Mission & Values</a></li>
+          <li><a routerLink="/about" [ngClass]="{'active': isActive('/about')}">About Us</a></li>
+          <li><a routerLink="/listserv" [ngClass]="{'active': isActive('/listserv')}">Listserv</a></li>
+        </ul>
+      } @else {
+
+        <div class="topnav">
+          <input type="checkbox" id="overlay-input" [ngClass]="{'checked': showMobileNav}">
+          <label for="overlay-input" id="overlay-button" (click)="toggleMobileNav()">
+            <span></span>
+          </label>
+        </div>
+
+        @if (showMobileNav) {
+          <ul id="mobile-nav">
+            <li><a routerLink="/mission" [ngClass]="{'active': isActive('/mission')}" [ngStyle]="{ 'border-bottom': mobile ? 'none' : ''}">Mission & Values</a></li>
+            <li><a routerLink="/about" [ngClass]="{'active': isActive('/about')}" [ngStyle]="{ 'border-bottom': mobile ? 'none' : ''}">About Us</a></li>
+            <li><a routerLink="/listserv" [ngClass]="{'active': isActive('/listserv')}" [ngStyle]="{ 'border-bottom': mobile ? 'none' : ''}">Listserv</a></li>
+          </ul>
+        }
+      }
+
+</mat-toolbar>
