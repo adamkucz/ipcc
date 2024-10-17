@@ -18,6 +18,7 @@
           <li><a routerLink="/about" [ngClass]="{'active': isActive('/about')}">About Us</a></li>
           <li><a routerLink="/listserv" [ngClass]="{'active': isActive('/listserv')}">Listserv</a></li>
         </ul>
+
       } @else {
 
         <div class="topnav">
@@ -28,11 +29,13 @@
         </div>
 
         @if (showMobileNav) {
+
           <ul id="mobile-nav">
-            <li><a routerLink="/mission" [ngClass]="{'active': isActive('/mission')}" [ngStyle]="{ 'border-bottom': mobile ? 'none' : ''}">Mission & Values</a></li>
-            <li><a routerLink="/about" [ngClass]="{'active': isActive('/about')}" [ngStyle]="{ 'border-bottom': mobile ? 'none' : ''}">About Us</a></li>
-            <li><a routerLink="/listserv" [ngClass]="{'active': isActive('/listserv')}" [ngStyle]="{ 'border-bottom': mobile ? 'none' : ''}">Listserv</a></li>
+            <li><a routerLink="/mission" [ngClass]="{'active': isActive('/mission')}" [ngStyle]="{ 'border-bottom': mobile ? 'none' : ''}" (click)="toggleMobileNav()">Mission & Values</a></li>
+            <li><a routerLink="/about" [ngClass]="{'active': isActive('/about')}" [ngStyle]="{ 'border-bottom': mobile ? 'none' : ''}" (click)="toggleMobileNav()">About Us</a></li>
+            <li><a routerLink="/listserv" [ngClass]="{'active': isActive('/listserv')}" [ngStyle]="{ 'border-bottom': mobile ? 'none' : ''}" (click)="toggleMobileNav()">Listserv</a></li>
           </ul>
+
         }
       }
 
