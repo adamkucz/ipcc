@@ -1,3 +1,13 @@
+
+#ipcc-logo {
+    width: 60px;
+}
+
+#org-name {
+    font-size: 20px;
+    color: var(--primary-color)
+}
+
 .spacer {
     flex: 1;
 }
@@ -22,12 +32,19 @@ margin: 0 16px;
 
 #nav-items {
     list-style-type: none;
+    color: #1E3D59;
 }
 
 #nav-items li {
-    font-size: 16px;
+    font-size: 18px;
     padding: 10px;
     display: inline;
+}
+
+#nav-items li a {
+    /* color: #1E3D59; */
+    color: var(--primary-color);
+    font-weight: 500;
 }
 
 #nav-items {
@@ -35,20 +52,24 @@ margin: 0 16px;
 }
 
 a,
-a:visited,
-a:hover {
-    color: var(--secondary-color);
+a:visited {
+    color: var(--primary-color);
     text-decoration: none;
 }
 
 a:hover {
-    color: #125699;
+    color: var(--secondary-color) !important;
+    transition: 150ms;
 }
 
 .active {
     padding-bottom: 7px;
     border-bottom: 2px solid var(--primary-color);
-    color: var(--primary-color)
+    font-weight: bold !important;
+}
+
+.active:hover {
+    color: var(--primary-color) !important;
 }
 
 #mobile-nav {

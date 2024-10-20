@@ -1,12 +1,12 @@
 <mat-toolbar class="toolbar">
 
     <a routerLink="/">
-        <img src="images/logo.svg" style="width: 60px; " alt="IPCC Logo">
+        <img id="ipcc-logo" src="images/logo.svg" alt="IPCC Logo">
     </a>
 
       <a routerLink="/">
-        <span style="font-size: 20px">
-          {{ mobile ? 'IPCC' : 'Inpatient Psychological Care Collaborative (IPCC)' }}
+        <span id="org-name">
+          {{ mobile ? 'Inpatient Psychology' : 'Inpatient Psychological Care Collaborative (IPCC)' }}
         </span>
       </a>
     
@@ -21,7 +21,7 @@
 
       } @else {
 
-        <div class="topnav">
+        <div id="topnav">
           <input type="checkbox" id="overlay-input" [ngClass]="{'checked': showMobileNav}">
           <label for="overlay-input" id="overlay-button" (click)="toggleMobileNav()">
             <span></span>

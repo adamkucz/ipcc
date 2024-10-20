@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './mission.component.html',
-  styleUrl: './mission.component.css'
+  styleUrls: ['./mission.component.css', './mission.mobile.component.css']
 })
 export class MissionComponent {
 

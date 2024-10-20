@@ -12,12 +12,13 @@ import { MatToolbarModule } from '@angular/material/toolbar'
     CommonModule
   ],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  styleUrls: ['./navbar.component.css', './navbar.mobile.component.css']
 })
 export class NavbarComponent {
 
   currentUrl: string = ''
-  mobile: boolean = window.innerWidth <= 1000
+  // mobile: boolean = window.innerWidth <= 1279
+  mobile: boolean = window.innerWidth <= 950
   showMobileNav: boolean = false
 
   constructor(private router: Router, private route: ActivatedRoute) { }
@@ -30,7 +31,7 @@ export class NavbarComponent {
 
   @HostListener('window:resize')
   onResize() {
-    this.mobile = window.innerWidth <= 1279
+    this.mobile = window.innerWidth <= 950
   }
 
   public isActive(route: string): boolean {
