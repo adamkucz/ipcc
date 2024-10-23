@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@600&display=swap');
+
+h2 {
+    color: var(--primary-color);
+}
+
+li {
+    margin: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+a:hover {
+    border-bottom: 2px solid var(--primary-color);
+    transition: 150ms;
+}
+
+#home-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto 75px;
+}
+
+#what-is-ipcc,
+#who-is-invited,
+#how-to-join {
+    font-size: 17px;
+    margin-right: 35px;
+}
+
+#tagline {
+    grid-column: 1 / span 2;
+    font-size: 40px;
+    font-family: "Encode Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    margin: 30px 0;
+    color: var(--primary-color);
+}
+
+#divider {
+    grid-column: 1 / span 2;
+    background-color: var(--secondary-color);
+    height: 25px;
+    transform: skewX(40deg);
+    z-index: -1;
+    margin: 30px 0;
+}
+
+#how-to-join {
+    grid-column: 1 / span 2;
+    background-color: var(--primary-color);
+    margin-top: 30px;
+    padding: 0 30px;
+}
+
+#how-to-join h2 {
+    color: white;
+    text-align: center;
+}
+
+#how-to-join p {
+    color: white;
+}
+
+#how-to-join a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+#how-to-join a:hover {
+    border-bottom: 2px solid white;
+    transition: 150ms;
+}
+
+#how-to-join-content {
+    display: flex;
+    flex-direction: row;
+}
+
+#enter-img {
+    height: 100px; margin-right: 40px;
+}

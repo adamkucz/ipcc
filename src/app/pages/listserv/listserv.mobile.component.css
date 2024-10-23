@@ -1,0 +1,11 @@
+
+
+@media only screen and (max-width: 950px) {
+    #listserv-container {
+        margin: 0;
+    }
+
+    ol {
+        padding: 15px;
+    }
+}

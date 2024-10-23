@@ -1,12 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@600&display=swap');
 
 #ipcc-logo {
     width: 60px;
 }
 
 #org-name {
+    font-family: "Encode Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
     font-size: 20px;
     color: var(--primary-color)
 }
+
 
 .spacer {
     flex: 1;
@@ -33,6 +40,13 @@ margin: 0 16px;
 #nav-items {
     list-style-type: none;
     color: #1E3D59;
+
+    font-family: "Encode Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
 }
 
 #nav-items li {

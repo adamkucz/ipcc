@@ -17,7 +17,6 @@ import { MatToolbarModule } from '@angular/material/toolbar'
 export class NavbarComponent {
 
   currentUrl: string = ''
-  // mobile: boolean = window.innerWidth <= 1279
   mobile: boolean = window.innerWidth <= 950
   showMobileNav: boolean = false
 
