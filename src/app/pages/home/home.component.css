@@ -22,7 +22,8 @@ a:hover {
 #home-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: auto 75px;
+    margin: auto 10%;
+    padding-bottom: 30px
 }
 
 #what-is-ipcc,
@@ -47,6 +48,7 @@ a:hover {
 #divider {
     grid-column: 1 / span 2;
     background-color: var(--secondary-color);
+    background-image: linear-gradient(to left, var(--primary-color), var(--secondary-color));
     height: 25px;
     transform: skewX(40deg);
     z-index: -1;
@@ -55,7 +57,7 @@ a:hover {
 
 #how-to-join {
     grid-column: 1 / span 2;
-    background-color: var(--primary-color);
+    background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
     margin-top: 30px;
     padding: 0 30px;
     border-radius: 10px;
@@ -87,5 +89,9 @@ a:hover {
 }
 
 #enter-img {
-    height: 100px; margin-right: 40px;
+    height: 100px;
+    margin-right: 40px;
 }
+
+
+

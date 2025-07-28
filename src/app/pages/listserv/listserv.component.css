@@ -1,21 +1,160 @@
+
 #listserv-container {
-    margin: 0 75px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.instruction {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 10px auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
 }
 
 .instruction-header {
     display: block;
-    font-size: 20px;
-    margin: 25px 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--primary-color);
 }
 
-.instruction {
-    margin: 50px 0;
+/* Guidelines Section */
+ .instructions {
+    background: white;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+}
+
+.instructions .instruction-header {
+    font-size: 1.75rem;
+    color: #2d3748;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 15px;
+}
+
+.instructions p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    text-align: center;
+    font-style: italic;
+}
+
+.instructions ol {
+    list-style: none;
+    counter-reset: rule-counter;
+}
+
+.instructions li {
+    counter-increment: rule-counter;
+    margin: 25px 0;
+    padding: 20px;
+    background: #f7fafc;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    position: relative;
+}
+
+.instructions li::before {
+    content: counter(rule-counter);
+    position: absolute;
+    left: -15px;
+    top: 15px;
+    background: var(--primary-color);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
 }
 
 .rule-header {
-    font-weight: bold;
+    font-weight: 700;
+    color: #2d3748;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    display: block;
 }
 
-li {
-    margin: 15px 0;
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    text-decoration: underline !important;
+}
+
+
+
+
+
+/* Responsive Design */
+/* @media (max-width: 768px) {
+    #listserv-container {
+        padding: 20px 15px;
+    }
+
+    .page-header {
+        padding: 30px 20px;
+        margin-bottom: 30px;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .quick-actions {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .instruction {
+        padding: 24px;
+    }
+
+    .instructions {
+        padding: 30px 20px;
+    }
+
+    .instructions li {
+        padding: 16px;
+        margin: 20px 0;
+    }
+
+    .instructions li::before {
+        left: -12px;
+        top: 12px;
+        width: 24px;
+        height: 24px;
+        font-size: 0.8rem;
+    } 
+} */
+
+/* Accessibility improvements */
+.instruction:focus-within {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .instruction {
+        transition: none;
+    }
 }

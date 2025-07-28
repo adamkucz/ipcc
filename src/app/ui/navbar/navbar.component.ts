@@ -30,7 +30,7 @@ export class NavbarComponent {
 
   @HostListener('window:resize')
   onResize() {
-    this.mobile = window.innerWidth <= 950
+    this.mobile = window.innerWidth <= 1100
   }
 
   public isActive(route: string): boolean {
